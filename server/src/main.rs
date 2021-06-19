@@ -1,11 +1,15 @@
-mod console_logger;
-mod logger;
-mod server;
+use warp::Filter;
 
-use console_logger::ConsoleLogger;
-use server::server;
+use log::info;
 
-fn main() {
-    let logger = Box::new(ConsoleLogger::new());
-    server(logger);
+#[tokio::main]
+async fn main() {
+    pretty_env_logger::init();
+
+    let hello = warp::path("helloworld").and(warp::path::end()).map(|| {
+        info!("Hello World request recieved.");
+        "Hello World"
+    });
+
+    warp::serve(hello).run(([127, 0, 0, 1], 3030)).await;
 }
