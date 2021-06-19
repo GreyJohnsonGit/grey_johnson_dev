@@ -9,7 +9,7 @@ impl Logger for ConsoleLogger {
         let now = Utc::now();
         let now = now.to_rfc3339();
         match log_message {
-            LogMessage::Standard(message) => {
+            LogMessage::Informational(message) => {
                 println!("[{}]: {}", now, message);
             }
             LogMessage::Warning(message) => {

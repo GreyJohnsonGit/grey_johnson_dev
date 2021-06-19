@@ -1,5 +1,5 @@
 pub enum LogMessage {
-    Standard(String),
+    Informational(String),
     Warning(String),
     Critical(String),
 }
