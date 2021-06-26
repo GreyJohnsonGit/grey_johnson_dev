@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { Navbar, Nav, FormControl, Form, Button } from 'react-bootstrap';
+import { Navbar, Nav } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
@@ -13,10 +13,6 @@ function App() {
           <Nav.Link href="#page2">Page2</Nav.Link>
           <Nav.Link href="#page3">Page3</Nav.Link>
         </Nav>
-        <Form inline>
-          <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-          <Button variant="outline-info">Search</Button>
-        </Form>
       </Navbar>
       <header className="App-header">
         <h1>Grey Johnson</h1>
