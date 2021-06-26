@@ -12,5 +12,5 @@ async fn main() {
 
     let routes = warp::any().and(default_route.or(api_hello_route));
 
-    warp::serve(routes).run(([127, 0, 0, 1], 3030)).await;
+    warp::serve(routes).run(([0, 0, 0, 0], 3030)).await;
 }
